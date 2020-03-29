@@ -1,0 +1,5 @@
+C:\Dev\Pilates\Pilates.EntityFramework\bin\Debug\netcoreapp3.1\Pilates.EntityFramework.deps.json
+C:\Dev\Pilates\Pilates.EntityFramework\bin\Debug\netcoreapp3.1\Pilates.EntityFramework.dll
+C:\Dev\Pilates\Pilates.EntityFramework\obj\Debug\netcoreapp3.1\Pilates.EntityFramework.csprojAssemblyReference.cache
+C:\Dev\Pilates\Pilates.EntityFramework\obj\Debug\netcoreapp3.1\Pilates.EntityFramework.AssemblyInfoInputs.cache
+C:\Dev\Pilates\Pilates.EntityFramework\obj\Debug\netcoreapp3.1\Pilates.EntityFramework.AssemblyInfo.cs

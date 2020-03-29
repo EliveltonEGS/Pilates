@@ -3,7 +3,49 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pilates.Model", "Pilates.Model\Pilates.Model.csproj", "{45BF5630-7A68-4D71-B58C-31DB0E65EA73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pilates.DTO", "Pilates.DTO\Pilates.DTO.csproj", "{13DE0539-7DC6-488D-B9EF-CBA4F298893A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pilates.Service", "Pilates.Service\Pilates.Service.csproj", "{C701F507-D75C-455E-B4CB-5578A2C5B06A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pilates.EntityFramework", "Pilates.EntityFramework\Pilates.EntityFramework.csproj", "{0B42D0C4-B97B-4E3E-9CC0-F5F4CE26E34D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pilates.Application", "Pilates.Application\Pilates.Application.csproj", "{77C89A99-F379-4935-B488-8A83B982C847}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pilates.WebApi", "Pilates.WebApi\Pilates.WebApi.csproj", "{2863A64C-B407-4FC1-B0DF-C112DE0AB2CB}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45BF5630-7A68-4D71-B58C-31DB0E65EA73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45BF5630-7A68-4D71-B58C-31DB0E65EA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45BF5630-7A68-4D71-B58C-31DB0E65EA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45BF5630-7A68-4D71-B58C-31DB0E65EA73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13DE0539-7DC6-488D-B9EF-CBA4F298893A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13DE0539-7DC6-488D-B9EF-CBA4F298893A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13DE0539-7DC6-488D-B9EF-CBA4F298893A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13DE0539-7DC6-488D-B9EF-CBA4F298893A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C701F507-D75C-455E-B4CB-5578A2C5B06A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C701F507-D75C-455E-B4CB-5578A2C5B06A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C701F507-D75C-455E-B4CB-5578A2C5B06A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C701F507-D75C-455E-B4CB-5578A2C5B06A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B42D0C4-B97B-4E3E-9CC0-F5F4CE26E34D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B42D0C4-B97B-4E3E-9CC0-F5F4CE26E34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B42D0C4-B97B-4E3E-9CC0-F5F4CE26E34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B42D0C4-B97B-4E3E-9CC0-F5F4CE26E34D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77C89A99-F379-4935-B488-8A83B982C847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77C89A99-F379-4935-B488-8A83B982C847}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77C89A99-F379-4935-B488-8A83B982C847}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77C89A99-F379-4935-B488-8A83B982C847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2863A64C-B407-4FC1-B0DF-C112DE0AB2CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2863A64C-B407-4FC1-B0DF-C112DE0AB2CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2863A64C-B407-4FC1-B0DF-C112DE0AB2CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2863A64C-B407-4FC1-B0DF-C112DE0AB2CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

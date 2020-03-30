@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Pilates.Adapter.Map.CadastroBaseModalidade
 {
-    public class MapperModalidade : IMapperModalidade
+    public class MapperAgenda : IMapperAgenda
     {
 
         List<ModalidadeDTO> modalidadeDTOs = new List<ModalidadeDTO>();

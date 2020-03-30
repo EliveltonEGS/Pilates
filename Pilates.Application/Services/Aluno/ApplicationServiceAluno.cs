@@ -11,11 +11,11 @@ namespace Pilates.Application.Services.Aluno
     public class ApplicationServiceAluno : IApplicationServiceAluno
     {
         private readonly IServiceAluno _serviceAluno;
-        private readonly IMapperAluno _mapperAluno;
+        private readonly IMapperAparelho _mapperAluno;
 
         public ApplicationServiceAluno(
             IServiceAluno serviceAluno,
-            IMapperAluno mapperAluno)
+            IMapperAparelho mapperAluno)
         {
             _serviceAluno = serviceAluno;
             _mapperAluno = mapperAluno;

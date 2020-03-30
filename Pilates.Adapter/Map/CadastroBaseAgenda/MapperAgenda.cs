@@ -3,15 +3,14 @@ using Pilates.Model.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Pilates.Adapter.Map.CadastroBaseModalidade
+namespace Pilates.Adapter.Map.CadastroBaseAgenda
 {
     public class MapperAgenda : IMapperAgenda
     {
 
         List<AgendaDTO> agendaDTOs = new List<AgendaDTO>();
 
-
-        public async Task<IEnumerable<AgendaDTO>> MapperListagedas(Task<IEnumerable<Agenda>> agendas)
+        public async Task<IEnumerable<AgendaDTO>> MapperListAgendas(Task<IEnumerable<Agenda>> agendas)
         {
             foreach (var item in await agendas)
             {

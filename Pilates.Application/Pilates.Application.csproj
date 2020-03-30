@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\Pilates.Adapter\Pilates.Adapter.csproj" />
+    <ProjectReference Include="..\Pilates.DTO\Pilates.DTO.csproj" />
+    <ProjectReference Include="..\Pilates.Service\Pilates.Service.csproj" />
   </ItemGroup>
 
 </Project>

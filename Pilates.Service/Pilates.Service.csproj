@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\Base\" />
+    <ProjectReference Include="..\Pilates.EntityFramework\Pilates.EntityFramework.csproj" />
+    <ProjectReference Include="..\Pilates.Model\Pilates.Model.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,6 +2,7 @@
 using Pilates.Application.Services.Modalidade;
 using Pilates.DTO.DTO;
 using System;
+using System.Threading.Tasks;
 
 namespace Pilates.WebApi.Controllers.CadastroBase
 {
@@ -19,9 +20,9 @@ namespace Pilates.WebApi.Controllers.CadastroBase
 
         [HttpGet]
         [Route("")]
-        public ActionResult<ModalidadeDTO> Get()
+        public async Task<ActionResult<ModalidadeDTO>> Get()
         {
-            return Ok(_applicationServiceModalidade.GetAll());
+            return Ok(await _applicationServiceModalidade.GetAll());
         }
 
         [HttpGet]

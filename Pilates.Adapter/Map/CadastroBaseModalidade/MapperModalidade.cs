@@ -1,6 +1,7 @@
 ﻿using Pilates.DTO.DTO;
 using Pilates.Model.Entities;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Pilates.Adapter.Map.CadastroBaseModalidade
 {
@@ -10,9 +11,9 @@ namespace Pilates.Adapter.Map.CadastroBaseModalidade
         List<ModalidadeDTO> modalidadeDTOs = new List<ModalidadeDTO>();
 
 
-        public IEnumerable<ModalidadeDTO> MapperListModalidades(IEnumerable<Modalidade> modalidades)
+        public async Task<IEnumerable<ModalidadeDTO>> MapperListModalidades(Task<IEnumerable<Modalidade>> modalidades)
         {
-            foreach (var item in modalidades)
+            foreach (var item in await modalidades)
             {
                 ModalidadeDTO modalidadeDTO = new ModalidadeDTO()
                 {

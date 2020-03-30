@@ -3,6 +3,7 @@ using Pilates.DTO.DTO;
 using Pilates.Service.Services.CadastroBase.CadastroBaseModalidade;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Pilates.Application.Services.Modalidade
 {
@@ -25,7 +26,7 @@ namespace Pilates.Application.Services.Modalidade
             _serviceModalidade.DeleteById(id);
         }
 
-        public IEnumerable<ModalidadeDTO> GetAll()
+        public async Task<IEnumerable<ModalidadeDTO>> GetAll()
         {
             /*List<ModalidadeDTO> modalidadeDTOs = new List<ModalidadeDTO>();
 
@@ -42,7 +43,7 @@ namespace Pilates.Application.Services.Modalidade
 
             return modalidadeDTOs;*/
 
-            return _mapperModalidade.MapperListModalidades(_serviceModalidade.GetAll());
+            return await _mapperModalidade.MapperListModalidades(_serviceModalidade.GetAll());
         }
 
         public ModalidadeDTO GetById(Guid id)

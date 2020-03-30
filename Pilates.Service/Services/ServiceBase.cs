@@ -1,6 +1,7 @@
 ﻿using Pilates.EntityFramework.Repositorys;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Pilates.Service.Services
 {
@@ -18,9 +19,9 @@ namespace Pilates.Service.Services
             _repository.DeleteById(id);
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public async Task<IEnumerable<TEntity>> GetAll()
         {
-            return _repository.GetAll();
+            return await _repository.GetAll();
         }
 
         public TEntity GetById(Guid id)

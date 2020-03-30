@@ -3,6 +3,7 @@ using Pilates.EntityFramework.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Pilates.EntityFramework.Repositorys
 {
@@ -16,7 +17,7 @@ namespace Pilates.EntityFramework.Repositorys
             _context = context;
         }
 
-        public void DeleteById(Guid id)
+        public virtual void DeleteById(Guid id)
         {
             var ent = GetById(id);
             _context.Attach(ent);
@@ -24,23 +25,23 @@ namespace Pilates.EntityFramework.Repositorys
             _context.SaveChanges();
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public virtual async Task<IEnumerable<TEntity>> GetAll()
         {
-            return _context.Set<TEntity>().AsNoTracking().ToList();
+            return await _context.Set<TEntity>().AsNoTracking().ToListAsync();
         }
 
-        public TEntity GetById(Guid id)
+        public virtual TEntity GetById(Guid id)
         {
             return _context.Set<TEntity>().Find(id);
         }
 
-        public void Save(TEntity input)
+        public virtual void Save(TEntity input)
         {
             _context.Set<TEntity>().Add(input);
             _context.SaveChanges();
         }
 
-        public void Update(TEntity input)
+        public virtual void Update(TEntity input)
         {
             _context.Entry(input).State = EntityState.Modified;
             _context.SaveChanges();

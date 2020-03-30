@@ -228,17 +228,81 @@
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
+      "Pilates.Adapter/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Pilates.DTO": "1.0.0",
+          "Pilates.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Pilates.Adapter.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pilates.Adapter.dll": {}
+        }
+      },
+      "Pilates.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Pilates.Adapter": "1.0.0",
+          "Pilates.DTO": "1.0.0",
+          "Pilates.Service": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Pilates.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pilates.Application.dll": {}
+        }
+      },
+      "Pilates.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Pilates.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pilates.DTO.dll": {}
+        }
+      },
       "Pilates.EntityFramework/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.InMemory": "3.1.3"
+          "Microsoft.EntityFrameworkCore.InMemory": "3.1.3",
+          "Pilates.Model": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Pilates.EntityFramework.dll": {}
         },
         "runtime": {
           "bin/placeholder/Pilates.EntityFramework.dll": {}
+        }
+      },
+      "Pilates.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Pilates.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pilates.Model.dll": {}
+        }
+      },
+      "Pilates.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Pilates.EntityFramework": "1.0.0",
+          "Pilates.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Pilates.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pilates.Service.dll": {}
         }
       }
     }
@@ -664,14 +728,41 @@
         "version.txt"
       ]
     },
+    "Pilates.Adapter/1.0.0": {
+      "type": "project",
+      "path": "../Pilates.Adapter/Pilates.Adapter.csproj",
+      "msbuildProject": "../Pilates.Adapter/Pilates.Adapter.csproj"
+    },
+    "Pilates.Application/1.0.0": {
+      "type": "project",
+      "path": "../Pilates.Application/Pilates.Application.csproj",
+      "msbuildProject": "../Pilates.Application/Pilates.Application.csproj"
+    },
+    "Pilates.DTO/1.0.0": {
+      "type": "project",
+      "path": "../Pilates.DTO/Pilates.DTO.csproj",
+      "msbuildProject": "../Pilates.DTO/Pilates.DTO.csproj"
+    },
     "Pilates.EntityFramework/1.0.0": {
       "type": "project",
       "path": "../Pilates.EntityFramework/Pilates.EntityFramework.csproj",
       "msbuildProject": "../Pilates.EntityFramework/Pilates.EntityFramework.csproj"
+    },
+    "Pilates.Model/1.0.0": {
+      "type": "project",
+      "path": "../Pilates.Model/Pilates.Model.csproj",
+      "msbuildProject": "../Pilates.Model/Pilates.Model.csproj"
+    },
+    "Pilates.Service/1.0.0": {
+      "type": "project",
+      "path": "../Pilates.Service/Pilates.Service.csproj",
+      "msbuildProject": "../Pilates.Service/Pilates.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Pilates.Adapter >= 1.0.0",
+      "Pilates.Application >= 1.0.0",
       "Pilates.EntityFramework >= 1.0.0"
     ]
   },
@@ -701,6 +792,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "C:\\Dev\\Pilates\\Pilates.Adapter\\Pilates.Adapter.csproj": {
+              "projectPath": "C:\\Dev\\Pilates\\Pilates.Adapter\\Pilates.Adapter.csproj"
+            },
+            "C:\\Dev\\Pilates\\Pilates.Application\\Pilates.Application.csproj": {
+              "projectPath": "C:\\Dev\\Pilates\\Pilates.Application\\Pilates.Application.csproj"
+            },
             "C:\\Dev\\Pilates\\Pilates.EntityFramework\\Pilates.EntityFramework.csproj": {
               "projectPath": "C:\\Dev\\Pilates\\Pilates.EntityFramework\\Pilates.EntityFramework.csproj"
             }

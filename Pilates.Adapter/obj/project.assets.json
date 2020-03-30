@@ -1,0 +1,107 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Pilates.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Pilates.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pilates.DTO.dll": {}
+        }
+      },
+      "Pilates.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Pilates.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pilates.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Pilates.DTO/1.0.0": {
+      "type": "project",
+      "path": "../Pilates.DTO/Pilates.DTO.csproj",
+      "msbuildProject": "../Pilates.DTO/Pilates.DTO.csproj"
+    },
+    "Pilates.Model/1.0.0": {
+      "type": "project",
+      "path": "../Pilates.Model/Pilates.Model.csproj",
+      "msbuildProject": "../Pilates.Model/Pilates.Model.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Pilates.DTO >= 1.0.0",
+      "Pilates.Model >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Elivelton\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Dev\\Pilates\\Pilates.Adapter\\Pilates.Adapter.csproj",
+      "projectName": "Pilates.Adapter",
+      "projectPath": "C:\\Dev\\Pilates\\Pilates.Adapter\\Pilates.Adapter.csproj",
+      "packagesPath": "C:\\Users\\Elivelton\\.nuget\\packages\\",
+      "outputPath": "C:\\Dev\\Pilates\\Pilates.Adapter\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Elivelton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "C:\\Dev\\Pilates\\Pilates.DTO\\Pilates.DTO.csproj": {
+              "projectPath": "C:\\Dev\\Pilates\\Pilates.DTO\\Pilates.DTO.csproj"
+            },
+            "C:\\Dev\\Pilates\\Pilates.Model\\Pilates.Model.csproj": {
+              "projectPath": "C:\\Dev\\Pilates\\Pilates.Model\\Pilates.Model.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

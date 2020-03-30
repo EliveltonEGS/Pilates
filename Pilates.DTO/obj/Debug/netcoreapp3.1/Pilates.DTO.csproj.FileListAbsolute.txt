@@ -1,0 +1,8 @@
+C:\Dev\Pilates\Pilates.DTO\bin\Debug\netcoreapp3.1\Pilates.DTO.deps.json
+C:\Dev\Pilates\Pilates.DTO\bin\Debug\netcoreapp3.1\Pilates.DTO.dll
+C:\Dev\Pilates\Pilates.DTO\bin\Debug\netcoreapp3.1\Pilates.DTO.pdb
+C:\Dev\Pilates\Pilates.DTO\obj\Debug\netcoreapp3.1\Pilates.DTO.csprojAssemblyReference.cache
+C:\Dev\Pilates\Pilates.DTO\obj\Debug\netcoreapp3.1\Pilates.DTO.AssemblyInfoInputs.cache
+C:\Dev\Pilates\Pilates.DTO\obj\Debug\netcoreapp3.1\Pilates.DTO.AssemblyInfo.cs
+C:\Dev\Pilates\Pilates.DTO\obj\Debug\netcoreapp3.1\Pilates.DTO.dll
+C:\Dev\Pilates\Pilates.DTO\obj\Debug\netcoreapp3.1\Pilates.DTO.pdb

@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Pilates.Adapter/1.0.0": {
+        "dependencies": {
+          "Pilates.DTO": "1.0.0",
+          "Pilates.Model": "1.0.0"
+        },
+        "runtime": {
+          "Pilates.Adapter.dll": {}
+        }
+      },
+      "Pilates.DTO/1.0.0": {
+        "runtime": {
+          "Pilates.DTO.dll": {}
+        }
+      },
+      "Pilates.Model/1.0.0": {
+        "runtime": {
+          "Pilates.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Pilates.Adapter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Pilates.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Pilates.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -5,10 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\Pilates.Adapter\Pilates.Adapter.csproj" />
+    <ProjectReference Include="..\Pilates.Application\Pilates.Application.csproj" />
     <ProjectReference Include="..\Pilates.EntityFramework\Pilates.EntityFramework.csproj" />
   </ItemGroup>
 

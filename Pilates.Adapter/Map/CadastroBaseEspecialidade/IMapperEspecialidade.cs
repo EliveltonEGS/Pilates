@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Pilates.Adapter.Map.CadastroBaseEspecialidade
 {
-    public interface IMapperExercicio
+    public interface IMapperEspecialidade
     { 
         Especialidade MapperToEntity(EspecialidadeDTO especialidadeDTO);
         Task<IEnumerable<EspecialidadeDTO>> MapperListEspecialidades(Task<IEnumerable<Especialidade>> especialidades);

@@ -11,11 +11,11 @@ namespace Pilates.Application.Services.Aparelho
     {
 
         private readonly IServiceAparelho _serviceAparelho;
-        private readonly IMapperContasPagar _mapperAparelho;
+        private readonly IMapperAparelho _mapperAparelho;
 
         public ApplicationServiceAparelho(
             IServiceAparelho serviceAparelho,
-            IMapperContasPagar mapperAparelho)
+            IMapperAparelho mapperAparelho)
         {
             _serviceAparelho = serviceAparelho;
             _mapperAparelho = mapperAparelho;

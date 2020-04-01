@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Pilates.Adapter.Map.CadastroBaseEspecialidade
 { 
-    public class MapperAula : IMapperExercicio
+    public class MapperEspecialidade : IMapperEspecialidade
     { 
 
         List<EspecialidadeDTO> especialidadeDTOs = new List<EspecialidadeDTO>();

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Pilates.Adapter.Map.CadastroBaseAparelho
 {
-    public interface IMapperContasPagar
+    public interface IMapperAparelho
     {
         Aparelho MapperToEntity(AparelhoDTO aparelhoDTO);
         Task<IEnumerable<AparelhoDTO>> MapperListAparelhos(Task<IEnumerable<Aparelho>> aparelhos);

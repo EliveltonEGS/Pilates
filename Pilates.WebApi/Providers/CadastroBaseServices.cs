@@ -20,7 +20,7 @@ namespace Pilates.WebApi.Providers
             services.AddScoped<IRepositoryModalidade, RepositoryModalidade>();
 
             //Adapters
-            services.AddScoped<IMapperAgenda, MapperAgenda>();
+            services.AddScoped<IMapperModalidade, IMapperModalidade>();
         }
     }
 }

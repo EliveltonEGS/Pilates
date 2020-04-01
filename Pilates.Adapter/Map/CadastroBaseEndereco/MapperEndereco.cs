@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Pilates.Adapter.Map.CadastroBaseEndereco
 {
-    public class MapperEndreco : IMapperEndereco
+    public class MapperEndereco : IMapperEndereco
     {
 
         List<EnderecoDTO> enderecoDTOs = new List<EnderecoDTO>();

@@ -4,7 +4,7 @@ using Pilates.DTO.DTO;
 using System;
 using System.Threading.Tasks;
 
-namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaaseEspecialidade
+namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseEspecialidade
 {
     [ApiController]
     [Route("[controller]")]

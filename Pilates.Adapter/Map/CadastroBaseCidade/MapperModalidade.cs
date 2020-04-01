@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Pilates.Adapter.Map.CadastroBaseCidade
 {
-    public class MapperAgenda : IMapperCidade
+    public class MapperCidade : IMapperCidade
     {
 
         List<CidadeDTO> cidadeDTOs = new List<CidadeDTO>();

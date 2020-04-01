@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Pilates.Adapter.Map.CadastroBaseAparelho
 {
-    public class MapperAparelho : IMapperAparelho
+    public class MapperContasPagar : IMapperContasPagar
     {
         List<AparelhoDTO> aparelhoDTOs = new List<AparelhoDTO>();
 

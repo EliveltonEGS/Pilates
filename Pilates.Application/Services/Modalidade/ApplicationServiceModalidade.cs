@@ -11,11 +11,11 @@ namespace Pilates.Application.Services.Modalidade
     {
 
         private readonly IServiceModalidade _serviceModalidade;
-        private readonly IMapperAgenda _mapperModalidade;
+        private readonly IMapperModalidade _mapperModalidade;
 
         public ApplicationServiceModalidade(
             IServiceModalidade serviceModalidade,
-            IMapperAgenda mapperModalidade)
+            IMapperModalidade mapperModalidade)
         {
             _serviceModalidade = serviceModalidade;
             _mapperModalidade = mapperModalidade;

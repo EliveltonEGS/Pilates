@@ -1,5 +1,6 @@
 ﻿
 using Pilates.Adapter.Map.CadastroBaseAluno;
+using Pilates.Adapter.Map.CadastroBaseAparelho;
 using Pilates.DTO.DTO;
 using Pilates.Service.Services.CadastroBase.CadastroBaseAluno;
 using System;
@@ -11,11 +12,11 @@ namespace Pilates.Application.Services.Aluno
     public class ApplicationServiceAluno : IApplicationServiceAluno
     {
         private readonly IServiceAluno _serviceAluno;
-        private readonly IMapperAparelho _mapperAluno;
+        private readonly IMapperAluno _mapperAluno;
 
         public ApplicationServiceAluno(
             IServiceAluno serviceAluno,
-            IMapperAparelho mapperAluno)
+            IMapperAluno mapperAluno)
         {
             _serviceAluno = serviceAluno;
             _mapperAluno = mapperAluno;

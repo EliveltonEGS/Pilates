@@ -18,5 +18,9 @@
     <ProjectReference Include="..\Pilates.EntityFramework\Pilates.EntityFramework.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+  </ItemGroup>
+
 
 </Project>

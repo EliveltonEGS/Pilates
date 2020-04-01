@@ -18,9 +18,4 @@
     <ProjectReference Include="..\Pilates.Service\Pilates.Service.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\Sala\" />
-    <Folder Include="Services\Professor\" />
-  </ItemGroup>
-
 </Project>

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseCidade
 {
     [ApiController]
-    [Route("")]
+    [Route("[controller]")]
     public class CidadeController : ControllerBase
     {
 

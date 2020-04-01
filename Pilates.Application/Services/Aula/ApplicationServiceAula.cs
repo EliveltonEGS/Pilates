@@ -1,4 +1,5 @@
-﻿using Pilates.DTO.DTO;
+﻿using Pilates.Adapter.Map.CadastroBaseAula;
+using Pilates.DTO.DTO;
 using Pilates.Service.Services.CadastroBase.CadastroBaseAula;
 using System;
 using System.Collections.Generic;
@@ -10,30 +11,39 @@ namespace Pilates.Application.Services.Aula
     {
 
         private readonly IServiceAula _serviceAula;
+        private readonly IMapperAula _mapperAula;
+
+        public ApplicationServiceAula(
+            IServiceAula serviceAula,
+            IMapperAula mapperAula)
+        {
+            _mapperAula = mapperAula;
+            _serviceAula = serviceAula;
+        }
 
         public void DeleteById(Guid id)
         {
-            throw new NotImplementedException();
+            _serviceAula.DeleteById(id);
         }
 
-        public Task<IEnumerable<AulaDTO>> GetAll()
+        public async Task<IEnumerable<AulaDTO>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _mapperAula.MapperListAulas(_serviceAula.GetAll());
         }
 
         public AulaDTO GetById(Guid id)
         {
-            throw new NotImplementedException();
+            return _mapperAula.MapperToDTO(_serviceAula.GetById(id));
         }
 
         public void Save(AulaDTO input)
         {
-            throw new NotImplementedException();
+            _serviceAula.Save(_mapperAula.MapperToEntity(input));
         }
 
         public void Update(AulaDTO input)
         {
-            throw new NotImplementedException();
+            _serviceAula.Update(_mapperAula.MapperToEntity(input));
         }
     }
 }

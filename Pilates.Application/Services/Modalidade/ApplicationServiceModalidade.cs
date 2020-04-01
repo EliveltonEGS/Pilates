@@ -1,5 +1,6 @@
 ﻿using Pilates.Adapter.Map.CadastroBaseModalidade;
 using Pilates.DTO.DTO;
+using Pilates.Service.Services;
 using Pilates.Service.Services.CadastroBase.CadastroBaseModalidade;
 using System;
 using System.Collections.Generic;
@@ -28,21 +29,6 @@ namespace Pilates.Application.Services.Modalidade
 
         public async Task<IEnumerable<ModalidadeDTO>> GetAll()
         {
-            /*List<ModalidadeDTO> modalidadeDTOs = new List<ModalidadeDTO>();
-
-            foreach (var item in _serviceModalidade.GetAll())
-            {
-                ModalidadeDTO modalidadeDTO = new ModalidadeDTO()
-                {
-                    Id = item.Id,
-                    Descricao = item.Descricao
-                };
-
-                modalidadeDTOs.Add(modalidadeDTO);
-            }
-
-            return modalidadeDTOs;*/
-
             return await _mapperModalidade.MapperListModalidades(_serviceModalidade.GetAll());
         }
 
@@ -60,5 +46,6 @@ namespace Pilates.Application.Services.Modalidade
         {
             _serviceModalidade.Update(_mapperModalidade.MapperToEntity(input));
         }
+
     }
 }

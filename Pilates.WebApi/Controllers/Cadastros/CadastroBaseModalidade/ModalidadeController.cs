@@ -4,7 +4,7 @@ using Pilates.DTO.DTO;
 using System;
 using System.Threading.Tasks;
 
-namespace Pilates.WebApi.Controllers.CadastroBase
+namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseModalidade
 {
     [ApiController]
     [Route("[controller]")]
@@ -34,7 +34,7 @@ namespace Pilates.WebApi.Controllers.CadastroBase
 
         [HttpPost]
         [Route("")]
-        public ActionResult<ModalidadeDTO> Save([FromBody] ModalidadeDTO input)
+        public ActionResult<ModalidadeDTO> Post([FromBody] ModalidadeDTO input)
         {
             if (ModelState.IsValid)
             {
@@ -49,7 +49,7 @@ namespace Pilates.WebApi.Controllers.CadastroBase
 
         [HttpPut]
         [Route("{id:Guid}")]
-        public ActionResult<ModalidadeDTO> Update(Guid id, [FromBody] ModalidadeDTO input)
+        public ActionResult<ModalidadeDTO> Put(Guid id, [FromBody] ModalidadeDTO input)
         {
             if (input == null || input.Id != id)
             {
@@ -64,7 +64,7 @@ namespace Pilates.WebApi.Controllers.CadastroBase
 
         [HttpDelete]
         [Route("{id:Guid}")]
-        public ActionResult<ModalidadeDTO> Remove(Guid id)
+        public ActionResult<ModalidadeDTO> Delete(Guid id)
         {
             _applicationServiceModalidade.DeleteById(id);
             return Ok("Removido");

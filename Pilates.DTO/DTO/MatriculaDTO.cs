@@ -18,5 +18,9 @@ namespace Pilates.DTO.DTO
         public SalaDTO SalaDTO { get; set; }
         public Guid FormaPagamentoId { get; set; }
         public FormaPagamentoDTO FormaPagamentoDTO { get; set; }
+        public Guid AulaId { get; set; }
+        public AulaDTO AulaDTO { get; set; }
+        public Guid AlunoId { get; set; }
+        public AlunoDTO AlunoDTO { get; set; }
     }
 }

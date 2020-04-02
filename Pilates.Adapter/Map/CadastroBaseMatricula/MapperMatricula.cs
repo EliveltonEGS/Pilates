@@ -22,7 +22,9 @@ namespace Pilates.Adapter.Map.CadastroBaseMatricula
                     FormaPagamentoId = item.FormaPagamentoId,
                     SalaId = item.SalaId,
                     ValorMatricula = item.ValorMatricula,
-                    ValorMensalidade = item.ValorMensalidade
+                    ValorMensalidade = item.ValorMensalidade,
+                    AlunoId = item.AulaId,
+                    AulaId = item.AulaId
                 };
 
                 matriculaDTOs.Add(matriculaDTO);
@@ -41,7 +43,9 @@ namespace Pilates.Adapter.Map.CadastroBaseMatricula
                 FormaPagamentoId = matricula.FormaPagamentoId,
                 SalaId = matricula.SalaId,
                 ValorMatricula = matricula.ValorMatricula,
-                ValorMensalidade = matricula.ValorMensalidade
+                ValorMensalidade = matricula.ValorMensalidade,
+                AlunoId = matricula.AulaId,
+                AulaId = matricula.AulaId
             };
 
             return matriculaDTO;
@@ -57,7 +61,9 @@ namespace Pilates.Adapter.Map.CadastroBaseMatricula
                 FormaPagamentoId = matriculaDTO.FormaPagamentoId,
                 SalaId = matriculaDTO.SalaId,
                 ValorMatricula = matriculaDTO.ValorMatricula,
-                ValorMensalidade = matriculaDTO.ValorMensalidade
+                ValorMensalidade = matriculaDTO.ValorMensalidade,
+                AlunoId = matriculaDTO.AulaId,
+                AulaId = matriculaDTO.AulaId
             };
 
             return matricula;

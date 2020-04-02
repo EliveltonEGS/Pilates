@@ -18,5 +18,9 @@ namespace Pilates.Model.Entities
         public Sala Sala { get; set; }
         public Guid FormaPagamentoId { get; set; }
         public FormaPagamento FormaPagamento { get; set; }
+        public Guid AlunoId { get; set; }
+        public Aluno Aluno { get; set; }
+        public Guid AulaId { get; set; }
+        public Aula Aula { get; set; }
     }
 }

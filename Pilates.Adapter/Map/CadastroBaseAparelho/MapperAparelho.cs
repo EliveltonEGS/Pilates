@@ -15,7 +15,7 @@ namespace Pilates.Adapter.Map.CadastroBaseAparelho
             {
                 AparelhoDTO aparelhoDTO = new AparelhoDTO()
                 {
-                    Id = item.Id,
+                    AparelhoId = item.AparelhoId,
                     Descricao = item.Descricao
                 };
 
@@ -29,7 +29,7 @@ namespace Pilates.Adapter.Map.CadastroBaseAparelho
         {
             AparelhoDTO aparelhoDTO = new AparelhoDTO()
             {
-                Id = aparelho.Id,
+                AparelhoId = aparelho.AparelhoId,
                 Descricao = aparelho.Descricao
             };
 
@@ -40,7 +40,7 @@ namespace Pilates.Adapter.Map.CadastroBaseAparelho
         {
             Aparelho Aparelho = new Aparelho()
             {
-                Id = aparelhoDTO.Id,
+                AparelhoId = aparelhoDTO.AparelhoId,
                 Descricao = aparelhoDTO.Descricao
             };
 

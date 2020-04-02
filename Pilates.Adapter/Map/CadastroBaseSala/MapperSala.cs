@@ -15,7 +15,7 @@ namespace Pilates.Adapter.Map.CadastroBaseSala
             {
                 SalaDTO salaDTO = new SalaDTO()
                 {
-                    Id = item.Id,
+                    SalaId = item.SalaId,
                     Descricao = item.Descricao
                 };
 
@@ -29,7 +29,7 @@ namespace Pilates.Adapter.Map.CadastroBaseSala
         {
             SalaDTO salaDTO = new SalaDTO()
             {
-                Id = sala.Id,
+                SalaId = sala.SalaId,
                 Descricao = sala.Descricao
             };
 
@@ -40,7 +40,7 @@ namespace Pilates.Adapter.Map.CadastroBaseSala
         {
             Sala sala = new Sala()
             {
-                Id = salaDTO.Id,
+                SalaId = salaDTO.SalaId,
                 Descricao = salaDTO.Descricao
             };
 

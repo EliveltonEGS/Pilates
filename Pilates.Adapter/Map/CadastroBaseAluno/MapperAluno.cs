@@ -15,7 +15,7 @@ namespace Pilates.Adapter.Map.CadastroBaseAluno
             {
                 AlunoDTO alunoDTO = new AlunoDTO()
                 {
-                    Id = item.Id,
+                    AlunoId = item.AlunoId,
                     NomeResponsavel = item.NomeResponsavel,
                     EnderecoId = item.EnderecoId,
                     ComoConheceu = item.ComoConheceu,
@@ -39,7 +39,7 @@ namespace Pilates.Adapter.Map.CadastroBaseAluno
         {
             AlunoDTO alunoDTO = new AlunoDTO()
             {
-                Id = aluno.Id,
+                AlunoId = aluno.AlunoId,
                 NomeResponsavel = aluno.NomeResponsavel,
                 EnderecoId = aluno.EnderecoId,
                 ComoConheceu = aluno.ComoConheceu,
@@ -59,7 +59,7 @@ namespace Pilates.Adapter.Map.CadastroBaseAluno
         {
             Aluno aluno = new Aluno()
             {
-                Id = alunoDTO.Id,
+                AlunoId = alunoDTO.AlunoId,
                 NomeResponsavel = alunoDTO.NomeResponsavel,
                 EnderecoId = alunoDTO.EnderecoId,
                 ComoConheceu = alunoDTO.ComoConheceu,

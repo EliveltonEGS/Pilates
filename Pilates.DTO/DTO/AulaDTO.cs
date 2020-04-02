@@ -2,8 +2,14 @@
 
 namespace Pilates.DTO.DTO
 {
-    public class AulaDTO : EntityBaseDTO
+    public class AulaDTO
     {
+        public AulaDTO()
+        {
+            AulaId = Guid.NewGuid();
+        }
+
+        public Guid AulaId { get; set; }
         public Guid ExercicioId { get; set; }
         public ExercicioDTO Exercicio { get; set; }
         public Guid ModalidadeId { get; set; }

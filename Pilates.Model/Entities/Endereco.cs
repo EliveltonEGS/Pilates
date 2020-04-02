@@ -2,8 +2,14 @@
 
 namespace Pilates.Model.Entities
 {
-    public class Endereco : EntityBase
+    public class Endereco
     {
+        public Endereco()
+        {
+            EnderecoId = Guid.NewGuid();
+        }
+
+        public Guid EnderecoId { get; set; }
         public string Logradouro { get; set; }
         public string Numero { get; set; }
         public string Complemento { get; set; }

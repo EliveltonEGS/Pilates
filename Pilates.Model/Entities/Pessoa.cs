@@ -2,7 +2,7 @@
 
 namespace Pilates.Model.Entities
 {
-    public class Pessoa : EntityBase
+    public class Pessoa
     {
         public string Nome { get; set; }
         public DateTime DataNasimento { get; set; }

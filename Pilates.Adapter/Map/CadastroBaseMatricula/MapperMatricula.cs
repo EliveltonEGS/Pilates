@@ -16,7 +16,7 @@ namespace Pilates.Adapter.Map.CadastroBaseMatricula
             {
                 MatriculaDTO matriculaDTO = new MatriculaDTO()
                 {
-                    Id = item.Id,
+                    MatriculaId = item.MatriculaId,
                     DataVencimentoMatricula = item.DataVencimentoMatricula,
                     DataVencimentoMensalidade = item.DataVencimentoMensalidade,
                     FormaPagamentoId = item.FormaPagamentoId,
@@ -35,7 +35,7 @@ namespace Pilates.Adapter.Map.CadastroBaseMatricula
         {
             MatriculaDTO matriculaDTO = new MatriculaDTO()
             {
-                Id = matricula.Id,
+                MatriculaId = matricula.MatriculaId,
                 DataVencimentoMatricula = matricula.DataVencimentoMatricula,
                 DataVencimentoMensalidade = matricula.DataVencimentoMensalidade,
                 FormaPagamentoId = matricula.FormaPagamentoId,
@@ -51,7 +51,7 @@ namespace Pilates.Adapter.Map.CadastroBaseMatricula
         {
             Matricula matricula = new Matricula()
             {
-                Id = matriculaDTO.Id,
+                MatriculaId = matriculaDTO.MatriculaId,
                 DataVencimentoMatricula = matriculaDTO.DataVencimentoMatricula,
                 DataVencimentoMensalidade = matriculaDTO.DataVencimentoMensalidade,
                 FormaPagamentoId = matriculaDTO.FormaPagamentoId,

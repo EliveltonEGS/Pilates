@@ -17,7 +17,7 @@ namespace Pilates.Adapter.Map.CadastroBaseCidade
             {
                 CidadeDTO cidadeDTO = new CidadeDTO()
                 {
-                    Id = item.Id,
+                    CidadeId = item.CidadeId,
                     Descricao = item.Descricao,
                     Cep = item.Cep,
                     Estado = item.Estado
@@ -33,7 +33,7 @@ namespace Pilates.Adapter.Map.CadastroBaseCidade
         {
             CidadeDTO cidadeDTO = new CidadeDTO()
             {
-                Id = cidade.Id,
+                CidadeId = cidade.CidadeId,
                 Descricao = cidade.Descricao,
                 Estado = cidade.Estado,
                 Cep = cidade.Cep
@@ -46,7 +46,7 @@ namespace Pilates.Adapter.Map.CadastroBaseCidade
         {
             Cidade cidade = new Cidade()
             {
-                Id = cidadeDTO.Id,
+                CidadeId = cidadeDTO.CidadeId,
                 Descricao = cidadeDTO.Descricao,
                 Estado = cidadeDTO.Estado,
                 Cep = cidadeDTO.Cep

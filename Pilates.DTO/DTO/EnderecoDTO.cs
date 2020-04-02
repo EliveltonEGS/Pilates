@@ -2,8 +2,14 @@
 
 namespace Pilates.DTO.DTO
 {
-    public class EnderecoDTO : EntityBaseDTO
+    public class EnderecoDTO
     {
+        public EnderecoDTO()
+        {
+            EnderecoId = Guid.NewGuid();
+        }
+
+        public Guid EnderecoId { get; set; }
         public string Logradouro { get; set; }
         public string Numero { get; set; }
         public string Complemento { get; set; }

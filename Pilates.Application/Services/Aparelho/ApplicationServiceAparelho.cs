@@ -43,7 +43,7 @@ namespace Pilates.Application.Services.Aparelho
 
         public void Update(AparelhoDTO input)
         {
-            _serviceAparelho.Save(_mapperAparelho.MapperToEntity(input));
+            _serviceAparelho.Update(_mapperAparelho.MapperToEntity(input));
         }
     }
 }

@@ -2,8 +2,15 @@
 
 namespace Pilates.Model.Entities
 {
-    public class Aula : EntityBase
+    public class Aula
     {
+        public Aula()
+        {
+            AulaId = Guid.NewGuid();
+        }
+
+        public Guid AulaId { get; set; }
+
         public Guid ExercicioId { get; set; }
         public Exercicio Exercicio { get; set; }
         public Guid ModalidadeId { get; set; }

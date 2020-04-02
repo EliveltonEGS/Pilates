@@ -1,0 +1,8 @@
+C:\Dev\Pilates\Pilates.Dapper\bin\Debug\netcoreapp3.1\Pilates.Dapper.deps.json
+C:\Dev\Pilates\Pilates.Dapper\bin\Debug\netcoreapp3.1\Pilates.Dapper.dll
+C:\Dev\Pilates\Pilates.Dapper\bin\Debug\netcoreapp3.1\Pilates.Dapper.pdb
+C:\Dev\Pilates\Pilates.Dapper\obj\Debug\netcoreapp3.1\Pilates.Dapper.csprojAssemblyReference.cache
+C:\Dev\Pilates\Pilates.Dapper\obj\Debug\netcoreapp3.1\Pilates.Dapper.AssemblyInfoInputs.cache
+C:\Dev\Pilates\Pilates.Dapper\obj\Debug\netcoreapp3.1\Pilates.Dapper.AssemblyInfo.cs
+C:\Dev\Pilates\Pilates.Dapper\obj\Debug\netcoreapp3.1\Pilates.Dapper.dll
+C:\Dev\Pilates\Pilates.Dapper\obj\Debug\netcoreapp3.1\Pilates.Dapper.pdb

@@ -2,7 +2,7 @@
 
 namespace Pilates.DTO.DTO
 {
-    public class PessoaDTO : EntityBaseDTO
+    public class PessoaDTO
     {
         public string Nome { get; set; }
         public DateTime DataNasimento { get; set; }

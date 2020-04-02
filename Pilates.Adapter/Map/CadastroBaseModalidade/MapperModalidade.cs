@@ -17,7 +17,7 @@ namespace Pilates.Adapter.Map.CadastroBaseModalidade
             {
                 ModalidadeDTO modalidadeDTO = new ModalidadeDTO()
                 {
-                    Id = item.Id,
+                    ModalidadeId = item.ModalidadeId,
                     Descricao = item.Descricao
                 };
 
@@ -31,7 +31,7 @@ namespace Pilates.Adapter.Map.CadastroBaseModalidade
         {
             ModalidadeDTO modalidadeDTO = new ModalidadeDTO()
             {
-                Id = modalidade.Id,
+                ModalidadeId = modalidade.ModalidadeId,
                 Descricao = modalidade.Descricao
             };
 
@@ -42,7 +42,7 @@ namespace Pilates.Adapter.Map.CadastroBaseModalidade
         {
             Modalidade modalidade = new Modalidade()
             {
-                Id = modalidadeDTO.Id,
+                ModalidadeId = modalidadeDTO.ModalidadeId,
                 Descricao = modalidadeDTO.Descricao
             };
 

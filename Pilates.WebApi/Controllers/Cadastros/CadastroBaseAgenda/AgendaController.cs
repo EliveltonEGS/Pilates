@@ -47,7 +47,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAgenda
         [HttpPut("{id:Guid}")]
         public ActionResult<AgendaDTO> Put(Guid id, [FromBody] AgendaDTO input)
         {
-            if(input ==  null || input.Id != id) 
+            if(input ==  null || input.AgendaId != id) 
             {
                 return BadRequest(input);
             }

@@ -51,7 +51,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseCidade
         [Route("{id:Guid}")]
         public ActionResult<CidadeDTO> Put(Guid id, [FromBody] CidadeDTO input)
         {
-            if (input == null || input.Id != id)
+            if (input == null || input.CidadeId != id)
             {
                 return BadRequest(input);
             }

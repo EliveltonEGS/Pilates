@@ -2,8 +2,14 @@
 
 namespace Pilates.Model.Entities
 {
-    public class ContasPagar : EntityBase
+    public class ContasPagar
     {
+        public ContasPagar()
+        {
+            ContasPagarId = Guid.NewGuid();
+        }
+
+        public Guid ContasPagarId { get; set; }
         public string StatusPagamento { get; set; }
         public bool Liberado { get; set; }
         public Guid MatriculaId { get; set; }

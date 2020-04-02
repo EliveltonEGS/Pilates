@@ -2,8 +2,14 @@
 
 namespace Pilates.Model.Entities
 {
-    public class Matricula : EntityBase
+    public class Matricula
     {
+        public Matricula()
+        {
+            MatriculaId = Guid.NewGuid();
+        }
+
+        public Guid MatriculaId { get; set; }
         public Decimal ValorMatricula { get; set; }
         public DateTime DataVencimentoMatricula { get; set; }
         public Decimal ValorMensalidade { get; set; }

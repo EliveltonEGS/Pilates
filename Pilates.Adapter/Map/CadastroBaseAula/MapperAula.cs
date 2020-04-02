@@ -16,7 +16,7 @@ namespace Pilates.Adapter.Map.CadastroBaseAula
             {
                 AulaDTO aulaDTO = new AulaDTO()
                 {
-                    Id = item.Id,
+                    AulaId = item.AulaId,
                     ExercicioId = item.ExercicioId,
                     ModalidadeId = item.ModalidadeId,
                     ProfessorId = item.ProfessorId
@@ -32,7 +32,7 @@ namespace Pilates.Adapter.Map.CadastroBaseAula
         {
             AulaDTO aulaDTO = new AulaDTO()
             {
-                Id = aula.Id,
+                AulaId = aula.AulaId,
                 ExercicioId = aula.ExercicioId,
                 ModalidadeId = aula.ModalidadeId,
                 ProfessorId = aula.ProfessorId
@@ -45,7 +45,7 @@ namespace Pilates.Adapter.Map.CadastroBaseAula
         {
             Aula aula = new Aula()
             {
-                Id = aulaDTO.Id,
+                AulaId = aulaDTO.AulaId,
                 ExercicioId = aulaDTO.ExercicioId,
                 ModalidadeId = aulaDTO.ModalidadeId,
                 ProfessorId = aulaDTO.ProfessorId

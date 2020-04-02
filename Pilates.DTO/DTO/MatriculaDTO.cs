@@ -2,8 +2,14 @@
 
 namespace Pilates.DTO.DTO
 {
-    public class MatriculaDTO : EntityBaseDTO
+    public class MatriculaDTO
     {
+        public MatriculaDTO()
+        {
+            MatriculaId = Guid.NewGuid();
+        }
+
+        public Guid MatriculaId { get; set; }
         public Decimal ValorMatricula { get; set; }
         public DateTime DataVencimentoMatricula { get; set; }
         public Decimal ValorMensalidade { get; set; }

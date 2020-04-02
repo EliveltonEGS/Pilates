@@ -16,8 +16,9 @@ namespace Pilates.Adapter.Map.CadastroBaseExercicio
             {
                 ExercicioDTO exercicioDTO = new ExercicioDTO()
                 {
-                    Id = item.Id,
-                   Descricao = item.Descricao
+                    ExercicioId = item.ExercicioId,
+                   Descricao = item.Descricao,
+                   AparelhoId = item.AparelhoId
                 };
 
                 exercicioDTOs.Add(exercicioDTO);
@@ -30,8 +31,9 @@ namespace Pilates.Adapter.Map.CadastroBaseExercicio
         {
             ExercicioDTO exercicioDTO = new ExercicioDTO()
             {
-                Id = exercicio.Id,
-                Descricao = exercicio.Descricao
+                ExercicioId = exercicio.ExercicioId,
+                Descricao = exercicio.Descricao,
+                AparelhoId = exercicio.AparelhoId
             };
 
             return exercicioDTO;
@@ -41,8 +43,9 @@ namespace Pilates.Adapter.Map.CadastroBaseExercicio
         {
             Exercicio exercicio = new Exercicio()
             {
-                Id = exercicioDTO.Id,
-                Descricao = exercicioDTO.Descricao
+                ExercicioId = exercicioDTO.ExercicioId,
+                Descricao = exercicioDTO.Descricao,
+                AparelhoId = exercicioDTO.AparelhoId
             };
 
             return exercicio;

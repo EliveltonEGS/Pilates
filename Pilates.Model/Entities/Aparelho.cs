@@ -1,7 +1,15 @@
-﻿namespace Pilates.Model.Entities
+﻿using System;
+
+namespace Pilates.Model.Entities
 {
-    public class Aparelho : EntityBase
+    public class Aparelho
     {
+        public Aparelho()
+        {
+            AparelhoId = Guid.NewGuid();
+        }
+
+        public Guid AparelhoId { get; set; }
         public string Descricao { get; set; }
     }
 }

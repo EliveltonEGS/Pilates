@@ -48,7 +48,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAluno
         [HttpPut, Route("{id:Guid}")]
         public ActionResult<AlunoDTO> Put(Guid id, [FromBody] AlunoDTO input)
         {
-            if (input == null || input.Id != id)
+            if (input == null || input.EnderecoId != id)
             {
                 return BadRequest(input);
             }

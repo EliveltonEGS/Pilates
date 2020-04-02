@@ -16,7 +16,7 @@ namespace Pilates.Adapter.Map.CadastroBaseProfessor
             {
                 ProfessorDTO professorDTO = new ProfessorDTO()
                 {
-                    Id = item.Id,
+                    ProfessorId = item.ProfessorId,
                     Celular = item.Celular,
                     Cpf = item.Cpf,
                     DataNasimento = item.DataNasimento,
@@ -39,7 +39,7 @@ namespace Pilates.Adapter.Map.CadastroBaseProfessor
         {
             ProfessorDTO professorDTO = new ProfessorDTO()
             {
-                Id = professor.Id,
+                ProfessorId = professor.ProfessorId,
                 Celular = professor.Celular,
                 Cpf = professor.Cpf,
                 DataNasimento = professor.DataNasimento,
@@ -59,7 +59,7 @@ namespace Pilates.Adapter.Map.CadastroBaseProfessor
         {
             Professor professor = new Professor()
             {
-                Id = professorDTO.Id,
+                ProfessorId = professorDTO.ProfessorId,
                 Celular = professorDTO.Celular,
                 Cpf = professorDTO.Cpf,
                 DataNasimento = professorDTO.DataNasimento,

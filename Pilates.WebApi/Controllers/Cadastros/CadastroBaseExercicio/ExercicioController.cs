@@ -51,7 +51,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseExercicio
         [Route("{id:Guid}")]
         public ActionResult<ExercicioDTO> Put(Guid id, [FromBody] ExercicioDTO input)
         {
-            if (input == null || input.Id != id)
+            if (input == null || input.ExercicioId != id)
             {
                 return BadRequest(input);
             }

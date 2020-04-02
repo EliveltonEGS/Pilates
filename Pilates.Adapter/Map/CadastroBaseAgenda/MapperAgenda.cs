@@ -16,7 +16,7 @@ namespace Pilates.Adapter.Map.CadastroBaseAgenda
             {
                 AgendaDTO agendaDTO = new AgendaDTO()
                 {
-                    Id = item.Id,
+                    AgendaId = item.AngendaId,
                     DataAula = item.DataAula,
                     DiaDisponivel = item.DiaDisponivel,
                     QuantidadeAulaPorSemana = item.QuantidadeAulaPorSemana,
@@ -33,7 +33,7 @@ namespace Pilates.Adapter.Map.CadastroBaseAgenda
         {
             AgendaDTO agendaDTO = new AgendaDTO()
             {
-                Id = agenda.Id,
+                AgendaId = agenda.AngendaId,
                 DataAula = agenda.DataAula,
                 DiaDisponivel = agenda.DiaDisponivel,
                 QuantidadeAulaPorSemana = agenda.QuantidadeAulaPorSemana,
@@ -47,7 +47,7 @@ namespace Pilates.Adapter.Map.CadastroBaseAgenda
         {
             Agenda agenda = new Agenda()
             {
-                Id = agendaDTO.Id,
+                AngendaId = agendaDTO.AgendaId,
                 DataAula = agendaDTO.DataAula,
                 DiaDisponivel = agendaDTO.DiaDisponivel,
                 QuantidadeAulaPorSemana = agendaDTO.QuantidadeAulaPorSemana,

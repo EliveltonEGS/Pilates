@@ -16,7 +16,7 @@ namespace Pilates.Adapter.Map.CadastroBaseFormaPagamento
             {
                 FormaPagamentoDTO formaPagamentoDTO = new FormaPagamentoDTO()
                 {
-                    Id = item.Id,
+                    FormaPagamentoId = item.FormaPagamentoId,
                     Descricao = item.Descricao
                 };
 
@@ -30,7 +30,7 @@ namespace Pilates.Adapter.Map.CadastroBaseFormaPagamento
         {
             FormaPagamentoDTO formaPagamentoDTO = new FormaPagamentoDTO()
             {
-                Id = formaPagamento.Id,
+                FormaPagamentoId = formaPagamento.FormaPagamentoId,
                 Descricao = formaPagamento.Descricao
             };
 
@@ -41,7 +41,7 @@ namespace Pilates.Adapter.Map.CadastroBaseFormaPagamento
         {
             FormaPagamento formaPagamento = new FormaPagamento()
             {
-                Id = formaPagamentoDTO.Id,
+                FormaPagamentoId = formaPagamentoDTO.FormaPagamentoId,
                 Descricao = formaPagamentoDTO.Descricao
             };
 

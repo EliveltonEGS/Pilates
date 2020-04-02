@@ -15,7 +15,7 @@ namespace Pilates.Adapter.Map.CadastroBaseContasPagar
             {
                 ContasPagarDTO contasPagarDTO = new ContasPagarDTO()
                 {
-                    Id = item.Id,
+                    ContasPagarId = item.ContasPagarId,
                     Liberado = item.Liberado,
                     StatusPagamento = item.StatusPagamento,
                     MatriculaId = item.MatriculaId
@@ -31,7 +31,7 @@ namespace Pilates.Adapter.Map.CadastroBaseContasPagar
         {
             ContasPagarDTO contasPagarDTO = new ContasPagarDTO()
             {
-                Id = contasPagar.Id,
+                ContasPagarId = contasPagar.ContasPagarId,
                 Liberado = contasPagar.Liberado,
                 StatusPagamento = contasPagar.StatusPagamento,
                 MatriculaId = contasPagar.MatriculaId
@@ -44,7 +44,7 @@ namespace Pilates.Adapter.Map.CadastroBaseContasPagar
         {
             ContasPagar contasPagar = new ContasPagar()
             {
-                Id = contasPagarDTO.Id,
+                ContasPagarId = contasPagarDTO.ContasPagarId,
                 Liberado = contasPagarDTO.Liberado,
                 StatusPagamento = contasPagarDTO.StatusPagamento,
                 MatriculaId = contasPagarDTO.MatriculaId

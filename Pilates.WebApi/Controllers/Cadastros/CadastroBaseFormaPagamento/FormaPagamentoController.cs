@@ -50,7 +50,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseFormaPagamento
         [Route("{id:Guid}")]
         public ActionResult<FormaPagamentoDTO> Put(Guid id, [FromBody] FormaPagamentoDTO input)
         {
-            if (input == null || input.Id != id)
+            if (input == null || input.FormaPagamentoId != id)
             {
                 return BadRequest(input);
             }

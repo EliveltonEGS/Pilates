@@ -51,7 +51,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseEndereco
         [Route("{id:Guid}")]
         public ActionResult<EnderecoDTO> Put(Guid id, [FromBody] EnderecoDTO input)
         {
-            if (input == null || input.Id != id)
+            if (input == null || input.EnderecoId != id)
             {
                 return BadRequest(input);
             }

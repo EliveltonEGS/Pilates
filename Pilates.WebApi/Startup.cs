@@ -22,16 +22,10 @@ namespace Pilates.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            /*services.AddDbContext<DataContext>(opt =>
+            opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));*/
+
             services.AddDbContext<DataContext>(options => options.UseInMemoryDatabase("Database"));
-            //services.AddMemoryCache();
-
-            /*services.AddScoped<IApplicationServiceModalidade, ApplicationServiceModalidade>();
-
-            services.AddScoped<IServiceModalidade, ServiceModalidade>();
-
-            services.AddScoped<IRepositoryModalidade, RepositoryModalidade>();
-
-            services.AddScoped<IMapperModalidade, MapperModalidade>();*/
 
             RegisterServices(services);
 

@@ -16,7 +16,7 @@ namespace Pilates.Adapter.Map.CadastroBaseEndereco
             {
                 EnderecoDTO enderecoDTO = new EnderecoDTO()
                 {
-                    Id = item.Id,
+                    EnderecoId = item.EnderecoId,
                     Bairro = item.Bairro,
                     CidadeId = item.CidadeId,
                     Complemento = item.Complemento,
@@ -34,7 +34,7 @@ namespace Pilates.Adapter.Map.CadastroBaseEndereco
         {
             EnderecoDTO enderecoDTO = new EnderecoDTO()
             {
-                Id = endereco.Id,
+                EnderecoId = endereco.EnderecoId    ,
                 Bairro = endereco.Bairro,
                 CidadeId = endereco.CidadeId,
                 Complemento = endereco.Complemento,
@@ -49,7 +49,7 @@ namespace Pilates.Adapter.Map.CadastroBaseEndereco
         {
             Endereco endereco = new Endereco()
             {
-                Id = enderecoDTO.Id,
+                EnderecoId = enderecoDTO.EnderecoId,
                 Bairro = enderecoDTO.Bairro,
                 CidadeId = enderecoDTO.CidadeId,
                 Complemento = enderecoDTO.Complemento,

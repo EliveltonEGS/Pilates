@@ -16,7 +16,7 @@ namespace Pilates.Adapter.Map.CadastroBaseEspecialidade
             {
                 EspecialidadeDTO especialidadeDTO = new EspecialidadeDTO()
                 {
-                    Id = item.Id,
+                    EspecialidadeId = item.EspecialidadeId,
                    Descricao = item.Descricao
                 };
 
@@ -30,7 +30,7 @@ namespace Pilates.Adapter.Map.CadastroBaseEspecialidade
         {
             EspecialidadeDTO especialidadeDTO = new EspecialidadeDTO()
             {
-                Id = especialidade.Id,
+                EspecialidadeId = especialidade.EspecialidadeId,
                 Descricao = especialidade.Descricao
             };
 
@@ -41,7 +41,7 @@ namespace Pilates.Adapter.Map.CadastroBaseEspecialidade
         {
             Especialidade especialidade = new Especialidade()
             {
-                Id = especialidadeDTO.Id,
+                EspecialidadeId = especialidadeDTO.EspecialidadeId,
                 Descricao = especialidadeDTO.Descricao
             };
 

@@ -10,6 +10,7 @@ namespace Pilates.DTO.DTO
         }
 
         public Guid AulaId { get; set; }
+        public string Descricao { get; set; }
         public Guid ExercicioId { get; set; }
         public ExercicioDTO Exercicio { get; set; }
         public Guid ModalidadeId { get; set; }

@@ -10,7 +10,7 @@ namespace Pilates.Model.Entities
         }
 
         public Guid AulaId { get; set; }
-
+        public string Descricao { get; set; }
         public Guid ExercicioId { get; set; }
         public Exercicio Exercicio { get; set; }
         public Guid ModalidadeId { get; set; }

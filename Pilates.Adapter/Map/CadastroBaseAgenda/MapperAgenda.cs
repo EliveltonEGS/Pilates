@@ -19,7 +19,7 @@ namespace Pilates.Adapter.Map.CadastroBaseAgenda
                     AgendaId = item.AngendaId,
                     DataAula = item.DataAula,
                     DiaDisponivel = item.DiaDisponivel,
-                    QuantidadeAulaPorSemana = item.QuantidadeAulaPorSemana,
+                    ProessorId = item.ProfessorId,
                     AulaId = item.AulaId
                 };
 
@@ -36,7 +36,7 @@ namespace Pilates.Adapter.Map.CadastroBaseAgenda
                 AgendaId = agenda.AngendaId,
                 DataAula = agenda.DataAula,
                 DiaDisponivel = agenda.DiaDisponivel,
-                QuantidadeAulaPorSemana = agenda.QuantidadeAulaPorSemana,
+                ProessorId = agenda.ProfessorId,
                 AulaId = agenda.AulaId
             };
 
@@ -50,7 +50,7 @@ namespace Pilates.Adapter.Map.CadastroBaseAgenda
                 AngendaId = agendaDTO.AgendaId,
                 DataAula = agendaDTO.DataAula,
                 DiaDisponivel = agendaDTO.DiaDisponivel,
-                QuantidadeAulaPorSemana = agendaDTO.QuantidadeAulaPorSemana,
+                ProfessorId = agendaDTO.ProessorId,
                 AulaId = agendaDTO.AulaId
             };
 

@@ -12,8 +12,9 @@ namespace Pilates.DTO.DTO
         public Guid AgendaId { get; set; }
         public DateTime DataAula { get; set; }
         public bool DiaDisponivel { get; set; }
-        public int QuantidadeAulaPorSemana { get; set; }
         public Guid AulaId { get; set; }
         public AulaDTO Aula { get; set; }
+        public Guid ProessorId { get; set; }
+        public ProfessorDTO Professor { get; set; }
     }
 }

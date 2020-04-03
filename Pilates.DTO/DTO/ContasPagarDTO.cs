@@ -11,7 +11,7 @@ namespace Pilates.DTO.DTO
 
         public Guid ContasPagarId { get; set; }
         public string StatusPagamento { get; set; }
-        public bool Liberado { get; set; }
+        public string Liberado { get; set; }
         public Guid MatriculaId { get; set; }
         public MatriculaDTO MatriculaDTO { get; set; }
     }

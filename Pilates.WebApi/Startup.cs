@@ -22,10 +22,10 @@ namespace Pilates.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            /*services.AddDbContext<DataContext>(opt =>
-            opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));*/
+            services.AddDbContext<DataContext>(opt =>
+            opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDbContext<DataContext>(options => options.UseInMemoryDatabase("Database"));
+            //services.AddDbContext<DataContext>(options => options.UseInMemoryDatabase("Database"));
 
             RegisterServices(services);
 
@@ -34,7 +34,7 @@ namespace Pilates.WebApi
 
         private static void RegisterServices(IServiceCollection services)
         {
-            //CadastroBase
+            //CadastrosBase
             services.AddCadastroBaseServices();
         }
 

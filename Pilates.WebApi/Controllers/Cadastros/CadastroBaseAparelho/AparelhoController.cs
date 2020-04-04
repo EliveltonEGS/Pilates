@@ -1,7 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Dapper;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Pilates.Application.Services.Aparelho;
+using Pilates.Dapper.Repositories;
 using Pilates.DTO.DTO;
 using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAparelho
@@ -20,9 +26,9 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAparelho
 
         [HttpGet]
         [Route("")]
-        public async Task<ActionResult<AparelhoDTO>> Get()
+        public ActionResult<AparelhoDTO> Get()
         {
-            return Ok(await _applicationServiceAparelho.GetAll());
+            return Ok(_applicationServiceAparelho.GetAll());
         }
 
         [HttpGet]

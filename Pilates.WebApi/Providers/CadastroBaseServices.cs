@@ -125,6 +125,7 @@ namespace Pilates.WebApi.Providers
             services.AddScoped<IMapperModalidade, MapperModalidade>();
             services.AddScoped<IMapperProfessor, MapperProfessor>();
             services.AddScoped<IMapperSala, MapperSala>();
+
         }
     }
 }

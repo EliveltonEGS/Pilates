@@ -1,0 +1,27 @@
+<nav class="mb-5">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/">Menu</a></li>
+    <li class="breadcrumb-item"><a routerLink="/aparelhos">Aparelhos</a></li>
+    <li class="breadcrumb-item active">{{pageTitle}}</li>
+  </ol>
+</nav>
+
+<form>
+  <div class="card">
+    <div class="card-header">
+      Dados do Cadastro de Aparelhos
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="form-row">
+      <!--Descrição do aparelho-->
+      <div class="form-group col-md-8">
+        <label for="name">Aparelho</label>
+        <input id="name" type="text" class="form-control" formControlName="name">
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-ng ml-4">Salvar</button>
+</form>

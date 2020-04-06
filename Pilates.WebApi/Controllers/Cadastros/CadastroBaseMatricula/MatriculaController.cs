@@ -2,13 +2,12 @@
 using Pilates.Application.Services.Matricula;
 using Pilates.DTO.DTO;
 using System;
-using System.Threading.Tasks;
 
 namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseMatricula
 {
     [ApiController]
     [Route("[controller]")]
-    public class MatriculaController : ControllerBase
+    public class MatriculaController : GenericController<MatriculaDTO>
     {
 
         private readonly IApplicationServiceMatricula _applicationServiceMatricula;
@@ -20,21 +19,21 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseMatricula
 
         [HttpGet]
         [Route("")]
-        public async Task<ActionResult<MatriculaDTO>> Get()
+        public override ActionResult<MatriculaDTO> GetAll()
         {
-            return Ok(await _applicationServiceMatricula.GetAll());
+            return Ok(_applicationServiceMatricula.GetAll());
         }
 
         [HttpGet]
         [Route("{id:Guid}")]
-        public ActionResult<MatriculaDTO> Get(Guid id)
+        public override ActionResult<MatriculaDTO> GetById(Guid id)
         {
             return Ok(_applicationServiceMatricula.GetById(id));
         }
 
         [HttpPost]
         [Route("")]
-        public ActionResult<MatriculaDTO> Post([FromBody] MatriculaDTO input)
+        public override ActionResult<MatriculaDTO> Post([FromBody] MatriculaDTO input)
         {
             if (ModelState.IsValid)
             {
@@ -49,7 +48,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseMatricula
 
         [HttpPut]
         [Route("{id:Guid}")]
-        public ActionResult<MatriculaDTO> Put(Guid id, [FromBody] MatriculaDTO input)
+        public override ActionResult<MatriculaDTO> Put(Guid id, [FromBody] MatriculaDTO input)
         {
             if (input == null || input.MatriculaId != id)
             {
@@ -64,7 +63,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseMatricula
 
         [HttpDelete]
         [Route("{id:Guid}")]
-        public ActionResult<MatriculaDTO> Delete(Guid id)
+        public override ActionResult<MatriculaDTO> Delete(Guid id)
         {
             _applicationServiceMatricula.DeleteById(id);
             return Ok("Removido");

@@ -2,13 +2,12 @@
 using Pilates.Application.Services.Modalidade;
 using Pilates.DTO.DTO;
 using System;
-using System.Threading.Tasks;
 
 namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseModalidade
 {
     [ApiController]
     [Route("[controller]")]
-    public class ModalidadeController : ControllerBase
+    public class ModalidadeController : GenericController<ModalidadeDTO>
     {
 
         private readonly IApplicationServiceModalidade _applicationServiceModalidade;
@@ -20,21 +19,21 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseModalidade
 
         [HttpGet]
         [Route("")]
-        public async Task<ActionResult<ModalidadeDTO>> Get()
+        public override ActionResult<ModalidadeDTO> GetAll()
         {
-            return Ok(await _applicationServiceModalidade.GetAll());
+            return Ok(_applicationServiceModalidade.GetAll());
         }
 
         [HttpGet]
         [Route("{id:Guid}")]
-        public ActionResult<ModalidadeDTO> Get(Guid id)
+        public override ActionResult<ModalidadeDTO> GetById(Guid id)
         {
             return Ok(_applicationServiceModalidade.GetById(id));
         }
 
         [HttpPost]
         [Route("")]
-        public ActionResult<ModalidadeDTO> Post([FromBody] ModalidadeDTO input)
+        public override ActionResult<ModalidadeDTO> Post([FromBody] ModalidadeDTO input)
         {
             if (ModelState.IsValid)
             {
@@ -49,7 +48,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseModalidade
 
         [HttpPut]
         [Route("{id:Guid}")]
-        public ActionResult<ModalidadeDTO> Put(Guid id, [FromBody] ModalidadeDTO input)
+        public override ActionResult<ModalidadeDTO> Put(Guid id, [FromBody] ModalidadeDTO input)
         {
             if (input == null || input.ModalidadeId != id)
             {
@@ -64,7 +63,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseModalidade
 
         [HttpDelete]
         [Route("{id:Guid}")]
-        public ActionResult<ModalidadeDTO> Delete(Guid id)
+        public override ActionResult<ModalidadeDTO> Delete(Guid id)
         {
             _applicationServiceModalidade.DeleteById(id);
             return Ok("Removido");

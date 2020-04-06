@@ -2,13 +2,12 @@
 using Pilates.Application.Services.Aluno;
 using Pilates.DTO.DTO;
 using System;
-using System.Threading.Tasks;
 
 namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAluno
 {
     [Route("[controller]")]
     [ApiController]
-    public class AlunoController : ControllerBase
+    public class AlunoController : GenericController<AlunoDTO>
     {
         private readonly IApplicationServiceAluno _applicationServiceAluno;
 
@@ -18,21 +17,21 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAluno
         }
 
         [HttpGet, Route("")]
-        public async Task<ActionResult<AlunoDTO>> Get()
+        public override ActionResult<AlunoDTO> GetAll()
         {
-            var ret = await _applicationServiceAluno.GetAll();
+            var ret = _applicationServiceAluno.GetAll();
             return Ok(ret);
         }
 
         [HttpGet, Route("{id:Guid}")]
-        public ActionResult<AlunoDTO> Get(Guid id)
+        public override ActionResult<AlunoDTO> GetById(Guid id)
         {
             var ret = _applicationServiceAluno.GetById(id);
             return Ok(ret);
         }
 
         [HttpPost]
-        public ActionResult<AlunoDTO> Post([FromBody] AlunoDTO input)
+        public override ActionResult<AlunoDTO> Post([FromBody] AlunoDTO input)
         {
             if (ModelState.IsValid)
             {
@@ -46,7 +45,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAluno
         }
 
         [HttpPut, Route("{id:Guid}")]
-        public ActionResult<AlunoDTO> Put(Guid id, [FromBody] AlunoDTO input)
+        public override ActionResult<AlunoDTO> Put(Guid id, [FromBody] AlunoDTO input)
         {
             if (input == null || input.EnderecoId != id)
             {
@@ -60,7 +59,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAluno
         }
 
         [HttpDelete, Route("{id:Guid}")]
-        public ActionResult<AlunoDTO> Put(Guid id)
+        public override ActionResult<AlunoDTO> Delete(Guid id)
         {
             _applicationServiceAluno.DeleteById(id);
             return Ok("Removido");

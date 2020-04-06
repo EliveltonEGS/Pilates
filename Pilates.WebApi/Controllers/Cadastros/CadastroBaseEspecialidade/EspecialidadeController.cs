@@ -2,13 +2,12 @@
 using Pilates.Application.Services.Especialidade;
 using Pilates.DTO.DTO;
 using System;
-using System.Threading.Tasks;
 
 namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseEspecialidade
 {
     [ApiController]
     [Route("[controller]")]
-    public class EspecialidadeController : ControllerBase
+    public class EspecialidadeController : GenericController<EspecialidadeDTO>
     {
 
         private readonly IApplicationServiceEspecialidade _applicationServiceEspecialidade;
@@ -20,21 +19,21 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseEspecialidade
 
         [HttpGet]
         [Route("")]
-        public async Task<ActionResult<EspecialidadeDTO>> Get()
+        public override ActionResult<EspecialidadeDTO> GetAll()
         {
-            return Ok(await _applicationServiceEspecialidade.GetAll());
+            return Ok(_applicationServiceEspecialidade.GetAll());
         }
 
         [HttpGet]
         [Route("{id:Guid}")]
-        public ActionResult<EspecialidadeDTO> Get(Guid id)
+        public override ActionResult<EspecialidadeDTO> GetById(Guid id)
         {
             return Ok(_applicationServiceEspecialidade.GetById(id));
         }
 
         [HttpPost]
         [Route("")]
-        public ActionResult<EspecialidadeDTO> Post([FromBody] EspecialidadeDTO input)
+        public override ActionResult<EspecialidadeDTO> Post([FromBody] EspecialidadeDTO input)
         {
             if (ModelState.IsValid)
             {
@@ -49,7 +48,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseEspecialidade
 
         [HttpPut]
         [Route("{id:Guid}")]
-        public ActionResult<EspecialidadeDTO> Put(Guid id, [FromBody] EspecialidadeDTO input)
+        public override ActionResult<EspecialidadeDTO> Put(Guid id, [FromBody] EspecialidadeDTO input)
         {
             if (input == null || input.EspecialidadeId != id)
             {
@@ -64,7 +63,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseEspecialidade
 
         [HttpDelete]
         [Route("{id:Guid}")]
-        public ActionResult<EspecialidadeDTO> Delete(Guid id)
+        public override ActionResult<EspecialidadeDTO> Delete(Guid id)
         {
             _applicationServiceEspecialidade.DeleteById(id);
             return Ok("Removido");

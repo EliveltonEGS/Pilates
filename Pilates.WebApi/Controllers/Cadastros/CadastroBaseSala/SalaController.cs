@@ -8,7 +8,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseSala
 {
     [ApiController]
     [Route("[controller]")]
-    public class SalaController : ControllerBase
+    public class SalaController : GenericController<SalaDTO>
     {
         private readonly IApplicationServiceSala _applicationServiceSala;
 
@@ -19,21 +19,21 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseSala
 
         [HttpGet]
         [Route("")]
-        public async Task<ActionResult<SalaDTO>> Get()
+        public override ActionResult<SalaDTO> GetAll()
         {
-            return Ok(await _applicationServiceSala.GetAll());
+            return Ok(_applicationServiceSala.GetAll());
         }
 
         [HttpGet]
         [Route("{id:Guid}")]
-        public ActionResult<SalaDTO> Get(Guid id)
+        public override ActionResult<SalaDTO> GetById(Guid id)
         {
             return Ok(_applicationServiceSala.GetById(id));
         }
 
         [HttpPost]
         [Route("")]
-        public ActionResult<SalaDTO> Post([FromBody] SalaDTO input)
+        public override ActionResult<SalaDTO> Post([FromBody] SalaDTO input)
         {
             if (ModelState.IsValid)
             {
@@ -48,7 +48,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseSala
 
         [HttpPut]
         [Route("{id:Guid}")]
-        public ActionResult<SalaDTO> Put(Guid id, [FromBody] SalaDTO input)
+        public override ActionResult<SalaDTO> Put(Guid id, [FromBody] SalaDTO input)
         {
             if (input == null || input.SalaId != id)
             {
@@ -63,7 +63,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseSala
 
         [HttpDelete]
         [Route("{id:Guid}")]
-        public ActionResult<SalaDTO> Delete(Guid id)
+        public override ActionResult<SalaDTO> Delete(Guid id)
         {
             _applicationServiceSala.DeleteById(id);
             return Ok("Removido");

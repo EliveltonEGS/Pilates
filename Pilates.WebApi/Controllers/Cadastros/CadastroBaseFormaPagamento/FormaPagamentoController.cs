@@ -2,13 +2,12 @@
 using Pilates.Application.Services.FormaPagamento;
 using Pilates.DTO.DTO;
 using System;
-using System.Threading.Tasks;
 
 namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseFormaPagamento
 {
     [ApiController]
     [Route("[controller]")]
-    public class FormaPagamentoController : ControllerBase
+    public class FormaPagamentoController : GenericController<FormaPagamentoDTO>
     {
         private readonly IApplicationServiceFormaPagamento _applicationServiceFormaPagamento;
 
@@ -19,21 +18,21 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseFormaPagamento
 
         [HttpGet]
         [Route("")]
-        public async Task<ActionResult<FormaPagamentoDTO>> Get()
+        public override ActionResult<FormaPagamentoDTO> GetAll()
         {
-            return Ok(await _applicationServiceFormaPagamento.GetAll());
+            return Ok(_applicationServiceFormaPagamento.GetAll());
         }
 
         [HttpGet]
         [Route("{id:Guid}")]
-        public ActionResult<FormaPagamentoDTO> Get(Guid id)
+        public override ActionResult<FormaPagamentoDTO> GetById(Guid id)
         {
             return Ok(_applicationServiceFormaPagamento.GetById(id));
         }
 
         [HttpPost]
         [Route("")]
-        public ActionResult<FormaPagamentoDTO> Post([FromBody] FormaPagamentoDTO input)
+        public override ActionResult<FormaPagamentoDTO> Post([FromBody] FormaPagamentoDTO input)
         {
             if (ModelState.IsValid)
             {
@@ -48,7 +47,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseFormaPagamento
 
         [HttpPut]
         [Route("{id:Guid}")]
-        public ActionResult<FormaPagamentoDTO> Put(Guid id, [FromBody] FormaPagamentoDTO input)
+        public override ActionResult<FormaPagamentoDTO> Put(Guid id, [FromBody] FormaPagamentoDTO input)
         {
             if (input == null || input.FormaPagamentoId != id)
             {
@@ -63,7 +62,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseFormaPagamento
 
         [HttpDelete]
         [Route("{id:Guid}")]
-        public ActionResult<FormaPagamentoDTO> Delete(Guid id)
+        public override ActionResult<FormaPagamentoDTO> Delete(Guid id)
         {
             _applicationServiceFormaPagamento.DeleteById(id);
             return Ok("Removido");

@@ -2,13 +2,12 @@
 using Pilates.Application.Services.Professor;
 using Pilates.DTO.DTO;
 using System;
-using System.Threading.Tasks;
 
 namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseProfessor
 {
     [ApiController]
     [Route("[controller]")]
-    public class ProfessorController : ControllerBase
+    public class ProfessorController : GenericController<ProfessorDTO>
     {
 
         private readonly IApplicationServiceProfessor _applicationServiceProfessor;
@@ -20,21 +19,21 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseProfessor
 
         [HttpGet]
         [Route("")]
-        public async Task<ActionResult<ProfessorDTO>> Get()
+        public override ActionResult<ProfessorDTO> GetAll()
         {
-            return Ok(await _applicationServiceProfessor.GetAll());
+            return Ok(_applicationServiceProfessor.GetAll());
         }
 
         [HttpGet]
         [Route("{id:Guid}")]
-        public ActionResult<ProfessorDTO> Get(Guid id)
+        public override ActionResult<ProfessorDTO> GetById(Guid id)
         {
             return Ok(_applicationServiceProfessor.GetById(id));
         }
 
         [HttpPost]
         [Route("")]
-        public ActionResult<ProfessorDTO> Post([FromBody] ProfessorDTO input)
+        public override ActionResult<ProfessorDTO> Post([FromBody] ProfessorDTO input)
         {
             if (ModelState.IsValid)
             {
@@ -49,7 +48,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseProfessor
 
         [HttpPut]
         [Route("{id:Guid}")]
-        public ActionResult<ProfessorDTO> Put(Guid id, [FromBody] ProfessorDTO input)
+        public override ActionResult<ProfessorDTO> Put(Guid id, [FromBody] ProfessorDTO input)
         {
             if (input == null || input.ProfessorId != id)
             {
@@ -64,7 +63,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseProfessor
 
         [HttpDelete]
         [Route("{id:Guid}")]
-        public ActionResult<ProfessorDTO> Delete(Guid id)
+        public override ActionResult<ProfessorDTO> Delete(Guid id)
         {
             _applicationServiceProfessor.DeleteById(id);
             return Ok("Removido");

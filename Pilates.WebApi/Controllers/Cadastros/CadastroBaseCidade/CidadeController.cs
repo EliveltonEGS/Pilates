@@ -2,13 +2,12 @@
 using Pilates.Application.Services.Cidade;
 using Pilates.DTO.DTO;
 using System;
-using System.Threading.Tasks;
 
 namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseCidade
 {
     [ApiController]
     [Route("[controller]")]
-    public class CidadeController : ControllerBase
+    public class CidadeController : GenericController<CidadeDTO>
     {
 
         private readonly IApplicationServiceCidade _applicationServiceCidade;
@@ -20,21 +19,21 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseCidade
 
         [HttpGet]
         [Route("")]
-        public async Task<ActionResult<CidadeDTO>> Get()
+        public override ActionResult<CidadeDTO> GetAll()
         {
-            return Ok(await _applicationServiceCidade.GetAll());
+            return Ok(_applicationServiceCidade.GetAll());
         }
 
         [HttpGet]
         [Route("{id:Guid}")]
-        public ActionResult<CidadeDTO> Get(Guid id)
+        public override ActionResult<CidadeDTO> GetById(Guid id)
         {
             return Ok(_applicationServiceCidade.GetById(id));
         }
 
         [HttpPost]
         [Route("")]
-        public ActionResult<CidadeDTO> Post([FromBody] CidadeDTO input)
+        public override ActionResult<CidadeDTO> Post([FromBody] CidadeDTO input)
         {
             if (ModelState.IsValid)
             {
@@ -49,7 +48,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseCidade
 
         [HttpPut]
         [Route("{id:Guid}")]
-        public ActionResult<CidadeDTO> Put(Guid id, [FromBody] CidadeDTO input)
+        public override ActionResult<CidadeDTO> Put(Guid id, [FromBody] CidadeDTO input)
         {
             if (input == null || input.CidadeId != id)
             {
@@ -64,7 +63,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseCidade
 
         [HttpDelete]
         [Route("{id:Guid}")]
-        public ActionResult<CidadeDTO> Delete(Guid id)
+        public override ActionResult<CidadeDTO> Delete(Guid id)
         {
             _applicationServiceCidade.DeleteById(id);
             return Ok("Removido");

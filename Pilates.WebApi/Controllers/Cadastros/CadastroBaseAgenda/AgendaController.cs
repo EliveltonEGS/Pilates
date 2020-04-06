@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Pilates.Application.Services.Agenda;
 using Pilates.DTO.DTO;
@@ -8,7 +7,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAgenda
 {
     [Route("[controller]")]
     [ApiController]
-    public class AgendaController : ControllerBase
+    public class AgendaController : GenericController<AgendaDTO>
     {
 
         private readonly IApplicationServiceAgenda _applicationServiceAgenda;
@@ -19,19 +18,19 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAgenda
         }
 
         [HttpGet]
-        public async Task<ActionResult<AgendaDTO>> Get()
+        public override ActionResult<AgendaDTO> GetAll()
         {
-            return Ok(await _applicationServiceAgenda.GetAll());
+            return Ok(_applicationServiceAgenda.GetAll());
         }
 
         [HttpGet("{id:Guid}")]
-        public ActionResult<AgendaDTO> Get(Guid id)
+        public override ActionResult<AgendaDTO> GetById(Guid id)
         {
             return Ok(_applicationServiceAgenda.GetById(id));
         }
 
         [HttpPost]
-        public ActionResult<AgendaDTO> Post([FromBody] AgendaDTO input)
+        public override ActionResult<AgendaDTO> Post([FromBody] AgendaDTO input)
         {
             if (ModelState.IsValid)
             {
@@ -45,7 +44,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAgenda
         }
 
         [HttpPut("{id:Guid}")]
-        public ActionResult<AgendaDTO> Put(Guid id, [FromBody] AgendaDTO input)
+        public override ActionResult<AgendaDTO> Put(Guid id, [FromBody] AgendaDTO input)
         {
             if(input ==  null || input.AgendaId != id) 
             {
@@ -59,7 +58,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAgenda
         }
 
         [HttpDelete("{id:Guid}")]
-        public ActionResult<AgendaDTO> Delete(Guid id)
+        public override ActionResult<AgendaDTO> Delete(Guid id)
         {
             _applicationServiceAgenda.DeleteById(id);
             return Ok("Removido");

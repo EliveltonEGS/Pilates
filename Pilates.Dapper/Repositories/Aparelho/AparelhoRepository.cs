@@ -15,6 +15,8 @@ namespace Pilates.Dapper.Repositories.Aparelho
 
         public override IEnumerable<AparelhoDTO> GetAll()
         {
+            //IDbConnection dbConnection1 = new SqlConnection(ConnectionString);
+
             using (IDbConnection dbConnection = new SqlConnection(ConnectionString))
             {
                 dbConnection.Open();

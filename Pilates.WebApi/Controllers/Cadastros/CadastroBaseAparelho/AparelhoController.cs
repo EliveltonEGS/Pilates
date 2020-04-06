@@ -1,20 +1,14 @@
-﻿using Dapper;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Pilates.Application.Services.Aparelho;
-using Pilates.Dapper.Repositories;
 using Pilates.DTO.DTO;
 using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAparelho
 {
     [ApiController]
     [Route("[controller]")]
-    public class AparelhoController : ControllerBase
+    public class AparelhoController : GenericController<AparelhoDTO>
     {
 
         private readonly IApplicationServiceAparelho _applicationServiceAparelho;
@@ -24,23 +18,27 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAparelho
             _applicationServiceAparelho = applicationServiceAparelho;
         }
 
-        [HttpGet]
-        [Route("")]
-        public ActionResult<AparelhoDTO> Get()
+        [HttpDelete, Route("{id:Guid}")]
+        public override ActionResult<AparelhoDTO> Delete(Guid id)
+        {
+            _applicationServiceAparelho.DeleteById(id);
+            return Ok("Removido");
+        }
+
+        [HttpGet, Route("")]
+        public override ActionResult<AparelhoDTO> GetAll()
         {
             return Ok(_applicationServiceAparelho.GetAll());
         }
 
-        [HttpGet]
-        [Route("{id:Guid}")]
-        public ActionResult<AparelhoDTO> Get(Guid id)
+        [HttpGet, Route("{id:Guid}")]
+        public override ActionResult<AparelhoDTO> GetById(Guid id)
         {
             return Ok(_applicationServiceAparelho.GetById(id));
         }
 
         [HttpPost]
-        [Route("")]
-        public ActionResult<AparelhoDTO> Post([FromBody] AparelhoDTO input)
+        public override ActionResult<AparelhoDTO> Post([FromBody] AparelhoDTO input)
         {
             if (ModelState.IsValid)
             {
@@ -53,9 +51,8 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAparelho
             }
         }
 
-        [HttpPut]
-        [Route("{id:Guid}")]
-        public ActionResult<AparelhoDTO> Put(Guid id, [FromBody] AparelhoDTO input)
+        [HttpPut, Route("{id:Guid}")]
+        public override ActionResult<AparelhoDTO> Put(Guid id, [FromBody] AparelhoDTO input)
         {
             if (input == null || input.AparelhoId != id)
             {
@@ -66,14 +63,6 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAparelho
                 _applicationServiceAparelho.Update(input);
                 return input;
             }
-        }
-
-        [HttpDelete]
-        [Route("{id:Guid}")]
-        public ActionResult<AparelhoDTO> Delete(Guid id)
-        {
-            _applicationServiceAparelho.DeleteById(id);
-            return Ok("Removido");
         }
     }
 }

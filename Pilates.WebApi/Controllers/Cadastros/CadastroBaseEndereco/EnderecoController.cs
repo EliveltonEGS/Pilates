@@ -2,13 +2,12 @@
 using Pilates.Application.Services.Endereco;
 using Pilates.DTO.DTO;
 using System;
-using System.Threading.Tasks;
 
 namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseEndereco
 {
     [ApiController]
     [Route("[controller]")]
-    public class EnderecoController : ControllerBase
+    public class EnderecoController : GenericController<EnderecoDTO>
     {
 
         private readonly IApplicationServiceEndereco _applicationServiceEndereco;
@@ -20,21 +19,21 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseEndereco
 
         [HttpGet]
         [Route("")]
-        public async Task<ActionResult<EnderecoDTO>> Get()
+        public override ActionResult<EnderecoDTO> GetAll()
         {
-            return Ok(await _applicationServiceEndereco.GetAll());
+            return Ok(_applicationServiceEndereco.GetAll());
         }
 
         [HttpGet]
         [Route("{id:Guid}")]
-        public ActionResult<EnderecoDTO> Get(Guid id)
+        public override ActionResult<EnderecoDTO> GetById(Guid id)
         {
             return Ok(_applicationServiceEndereco.GetById(id));
         }
 
         [HttpPost]
         [Route("")]
-        public ActionResult<EnderecoDTO> Post([FromBody] EnderecoDTO input)
+        public override ActionResult<EnderecoDTO> Post([FromBody] EnderecoDTO input)
         {
             if (ModelState.IsValid)
             {
@@ -49,7 +48,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseEndereco
 
         [HttpPut]
         [Route("{id:Guid}")]
-        public ActionResult<EnderecoDTO> Put(Guid id, [FromBody] EnderecoDTO input)
+        public override ActionResult<EnderecoDTO> Put(Guid id, [FromBody] EnderecoDTO input)
         {
             if (input == null || input.EnderecoId != id)
             {
@@ -64,7 +63,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseEndereco
 
         [HttpDelete]
         [Route("{id:Guid}")]
-        public ActionResult<EnderecoDTO> Delete(Guid id)
+        public override ActionResult<EnderecoDTO> Delete(Guid id)
         {
             _applicationServiceEndereco.DeleteById(id);
             return Ok("Removido");

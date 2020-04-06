@@ -2,6 +2,7 @@
 using Pilates.Adapter.Map.CadastroBaseAparelho;
 using Pilates.Dapper.Repositories.Aparelho;
 using Pilates.DTO.DTO;
+using Pilates.Service.Services;
 using Pilates.Service.Services.CadastroBase.CadastroBaseAparelho;
 using System;
 using System.Collections.Generic;

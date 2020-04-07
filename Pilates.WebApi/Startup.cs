@@ -13,7 +13,7 @@ namespace Pilates.WebApi
     public class Startup
     {
         public Startup(IConfiguration configuration)
-        {
+        {   
             Configuration = configuration;
         }
 
@@ -29,6 +29,15 @@ namespace Pilates.WebApi
 
             RegisterServices(services);
 
+            //habilta outro domínio
+            services.AddCors(options =>
+            {
+                options.AddPolicy("EnableCORS", builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().Build();
+                });
+            });
+
             services.AddControllers();
         }
 
@@ -36,6 +45,7 @@ namespace Pilates.WebApi
         {
             //CadastrosBase
             services.AddCadastroBaseServices();
+
         }
 
             // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +55,8 @@ namespace Pilates.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors("EnableCORS");
 
             app.UseHttpsRedirection();
 

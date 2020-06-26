@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Pilates.Application.Services.Aparelho;
 using Pilates.DTO.DTO;
 using System;
@@ -7,7 +6,7 @@ using System;
 namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAparelho
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/aparelhos")]
     public class AparelhoController : GenericController<AparelhoDTO>
     {
 
@@ -38,6 +37,7 @@ namespace Pilates.WebApi.Controllers.Cadastros.CadastroBaseAparelho
         }
 
         [HttpPost]
+        [Route("")]
         public override ActionResult<AparelhoDTO> Post([FromBody] AparelhoDTO input)
         {
             if (ModelState.IsValid)

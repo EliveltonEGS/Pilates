@@ -13,5 +13,7 @@ namespace Pilates.EntityFramework.Repositorys.CadastroBase.CadastroBaseAparelho
         {
             _context = context;
         }
+
+
     }
 }
